@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة - الأسئلة الشائعة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+    <!-- Particles Canvas -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Ambient Light Orbs -->
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+
+    <!-- Main FAQ Section -->
+    <section class="faq-section" id="faqSection">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="section-header">
+                <!-- Decorative Lantern Icon -->
+                <div class="lantern-icon">
+                    <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38 8C38 8 40 2 42 8" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="36" y="8" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+                        <path d="M20 40C20 24 30 14 40 14C50 14 60 24 60 40C60 56 50 66 40 70C30 66 20 56 20 40Z" fill="url(#lanternGrad)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+                        <path d="M28 40C28 30 33 22 40 22C47 22 52 30 52 40C52 50 47 58 40 62C33 58 28 50 28 40Z" fill="url(#innerGlow)" opacity="0.6"/>
+                        <ellipse cx="40" cy="38" rx="6" ry="8" fill="url(#lightCore)" opacity="0.8"/>
+                        <path d="M32 70L40 70L48 70" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M34 74L40 76L46 74" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="goldGrad" x1="20" y1="0" x2="60" y2="80" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#d4a853"/>
+                                <stop offset="1" stop-color="#b8860b"/>
+                            </linearGradient>
+                            <radialGradient id="lanternGrad" cx="40" cy="40" r="26" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1a4a3a" stop-opacity="0.3"/>
+                                <stop offset="1" stop-color="#0d2e23" stop-opacity="0.6"/>
+                            </radialGradient>
+                            <radialGradient id="innerGlow" cx="40" cy="38" r="16" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#e8d5a3" stop-opacity="0.4"/>
+                                <stop offset="1" stop-color="#d4a853" stop-opacity="0.05"/>
+                            </radialGradient>
+                            <radialGradient id="lightCore" cx="40" cy="36" r="8" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#fef3c7" stop-opacity="0.9"/>
+                                <stop offset="1" stop-color="#d4a853" stop-opacity="0.1"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <div class="lantern-glow"></div>
+                </div>
+
+                <span class="section-badge">مركز المساعدة</span>
+                <h2 class="section-title">الأسئلة الشائعة</h2>
+                <p class="section-subtitle">
+                    نجيبك على كل ما يدور في ذهنك حول منصة
+                    <span class="brand-highlight">مشكاة</span>
+                    التعليمية
+                </p>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <span class="ornament-diamond"></span>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+          
+            <!-- Accordion Container -->
+            <div class="accordion-container" id="accordionContainer">
+
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item" data-category="general" data-index="0">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">01</span>
+                            <span class="item-question">ما هي منصة مشكاة التعليمية؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>
+                                منصة <strong>مشكاة</strong> هي منصة تعليمية إسلامية متكاملة تهدف إلى نشر العلم الشرعي
+                                بأسلوب عصري ومُيسّر. تقدم المنصة دورات متنوعة في علوم القرآن الكريم، والحديث النبوي الشريف،
+                                والفقه الإسلامي، والسيرة النبوية، واللغة العربية، وغيرها من العلوم الشرعية والإنسانية.
+                            </p>
+                            <div class="content-highlight">
+                                <span class="highlight-icon">💡</span>
+                                <span>اسم "مشكاة" مستوحى من قوله تعالى: ﴿مَثَلُ نُورِهِ كَمِشْكَاةٍ فِيهَا مِصْبَاحٌ﴾ — كرمز لنور العلم والهداية.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item" data-category="general" data-index="1">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">02</span>
+                            <span class="item-question">من هم المعلمون والشيوخ في المنصة؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>
+                                تضم منصة مشكاة نخبة من العلماء والمشايخ المتخصصين في مختلف العلوم الشرعية،
+                                حاصلين على إجازات علمية معتمدة ولديهم خبرة طويلة في التدريس والتعليم.
+                            </p>
+                            <ul class="content-list">
+                                <li>شيوخ متخصصون في علوم القرآن والتجويد بأسانيد متصلة</li>
+                                <li>أساتذة جامعيون في الفقه وأصوله من جامعات عريقة</li>
+                                <li>محاضرون في الحديث النبوي ومصطلحه</li>
+                                <li>معلمات متخصصات للأقسام النسائية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item" data-category="courses" data-index="2">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">03</span>
+                            <span class="item-question">ما هي الدورات المتاحة على المنصة؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>تقدم المنصة مجموعة واسعة من الدورات التعليمية المصنفة حسب المستوى والتخصص:</p>
+                            <div class="courses-grid">
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    تحفيظ القرآن الكريم
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    أحكام التجويد
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    التفسير وعلومه
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    الحديث ومصطلحه
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    الفقه الإسلامي
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    العقيدة الإسلامية
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    السيرة النبوية
+                                </div>
+                                <div class="course-tag">
+                                    <span class="tag-dot"></span>
+                                    اللغة العربية وآدابها
+                                </div>
+                            </div>
+                            <div class="content-highlight">
+                                <span class="highlight-icon">📌</span>
+                                <span>تتوفر دورات للمبتدئين والمتوسطين والمتقدمين، مع مسارات تعليمية متدرجة.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item" data-category="courses" data-index="3">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">04</span>
+                            <span class="item-question">هل تُمنح شهادات بعد إتمام الدورات؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>
+                                نعم، تمنح منصة مشكاة شهادات إتمام معتمدة لكل دورة يُكملها الطالب بنجاح.
+                                تتضمن الشهادة اسم الدورة، واسم المعلم، وعدد الساعات، ورمز تحقق فريد.
+                            </p>
+                            <ul class="content-list">
+                                <li>شهادة إلكترونية قابلة للتحميل والطباعة بتصميم أنيق</li>
+                                <li>رمز QR للتحقق من صحة الشهادة</li>
+                                <li>إمكانية مشاركتها على منصات التواصل الاجتماعي</li>
+                                <li>شهادات خاصة لبرامج الإجازة في القرآن الكريم</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item" data-category="technical" data-index="4">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">05</span>
+                            <span class="item-question">كيف أسجل في المنصة وأبدأ التعلم؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>التسجيل في منصة مشكاة سهل ويتم في خطوات بسيطة:</p>
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <span class="step-number">١</span>
+                                    <span>اضغط على زر "إنشاء حساب" في الصفحة الرئيسية</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">٢</span>
+                                    <span>أدخل بياناتك الأساسية (الاسم، البريد الإلكتروني، كلمة المرور)</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">٣</span>
+                                    <span>فعّل حسابك عبر رسالة التأكيد المرسلة لبريدك</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">٤</span>
+                                    <span>اختر المسار التعليمي المناسب وابدأ رحلتك!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item" data-category="technical" data-index="5">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">06</span>
+                            <span class="item-question">هل يمكنني التعلم من الهاتف المحمول؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>
+                                بالتأكيد! منصة مشكاة مصممة بتقنية متجاوبة تعمل بكفاءة على جميع الأجهزة.
+                                كما يتوفر تطبيق مخصص للهواتف الذكية يوفر تجربة تعليمية متميزة.
+                            </p>
+                            <ul class="content-list">
+                                <li>تطبيق مخصص لأجهزة Android و iOS</li>
+                                <li>إمكانية تحميل الدروس للمشاهدة بدون إنترنت</li>
+                                <li>إشعارات ذكية بمواعيد الدروس والحلقات المباشرة</li>
+                                <li>مزامنة تلقائية للتقدم بين جميع أجهزتك</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="accordion-item" data-category="payment" data-index="6">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">07</span>
+                            <span class="item-question">ما هي خطط الاشتراك المتاحة؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>توفر منصة مشكاة عدة خطط اشتراك تناسب مختلف الاحتياجات:</p>
+                            <div class="plans-grid">
+                                <div class="plan-card plan-free">
+                                    <h4>المجاني</h4>
+                                    <p>وصول محدود للدروس التمهيدية والمحتوى المفتوح</p>
+                                </div>
+                                <div class="plan-card plan-monthly">
+                                    <h4>الشهري</h4>
+                                    <p>وصول كامل لجميع الدورات والمحتوى التفاعلي</p>
+                                </div>
+                                <div class="plan-card plan-yearly">
+                                    <h4>السنوي</h4>
+                                    <p>توفير 40% مع مزايا حصرية وجلسات خاصة</p>
+                                    <span class="plan-badge">الأفضل قيمة</span>
+                                </div>
+                            </div>
+                            <div class="content-highlight">
+                                <span class="highlight-icon">🎁</span>
+                                <span>نقدم منحًا مجانية لطلاب العلم غير القادرين — تواصل معنا عبر صفحة "المنح الدراسية".</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="accordion-item" data-category="payment" data-index="7">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">08</span>
+                            <span class="item-question">ما هي طرق الدفع المتاحة؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>نوفر طرق دفع متعددة وآمنة لتسهيل عملية الاشتراك:</p>
+                            <ul class="content-list">
+                                <li>البطاقات البنكية (Visa / Mastercard / مدى)</li>
+                                <li>Apple Pay و Google Pay</li>
+                                <li>التحويل البنكي المباشر</li>
+                                <li>المحافظ الإلكترونية (STC Pay / Paypal)</li>
+                                <li>بطاقات الدفع المسبق</li>
+                            </ul>
+                            <div class="content-highlight">
+                                <span class="highlight-icon">🔒</span>
+                                <span>جميع المعاملات المالية مشفرة ومؤمنة بأعلى معايير الحماية (SSL 256-bit).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="accordion-item" data-category="courses" data-index="8">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">09</span>
+                            <span class="item-question">هل تتوفر حلقات تحفيظ قرآن مباشرة؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>
+                                نعم، توفر مشكاة حلقات تحفيظ مباشرة يومية مع معلمين ومعلمات مجازين بأسانيد متصلة
+                                إلى النبي ﷺ. تُعقد الحلقات في أوقات مرنة تناسب مختلف المناطق الزمنية.
+                            </p>
+                            <ul class="content-list">
+                                <li>حلقات فردية (طالب واحد مع المعلم) لتركيز أعلى</li>
+                                <li>حلقات جماعية صغيرة (3-5 طلاب) لتشجيع التنافس</li>
+                                <li>برنامج مراجعة يومي منظم لتثبيت الحفظ</li>
+                                <li>تقارير أسبوعية مفصلة عن مستوى التقدم</li>
+                                <li>برنامج إجازة في القراءات العشر</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="accordion-item" data-category="general" data-index="9">
+                    <button class="accordion-trigger" aria-expanded="false">
+                        <div class="trigger-content">
+                            <span class="item-number">10</span>
+                            <span class="item-question">كيف أتواصل مع فريق الدعم؟</span>
+                        </div>
+                        <div class="trigger-icon">
+                            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p>فريق دعم مشكاة متاح لمساعدتك على مدار الساعة عبر عدة قنوات:</p>
+                            <ul class="content-list">
+                                <li>الدردشة المباشرة على المنصة (متاحة 24/7)</li>
+                                <li>البريد الإلكتروني: support@mishkat.edu</li>
+                                <li>واتساب: +201012345678</li>
+                                <li>نموذج التواصل في صفحة "اتصل بنا"</li>
+                            </ul>
+                            <div class="content-highlight">
+                                <span class="highlight-icon">⏱️</span>
+                                <span>متوسط وقت الرد: أقل من ساعة واحدة خلال أوقات العمل الرسمية.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="bottom-cta">
+                <div class="cta-content">
+                    <div class="cta-icon">❓</div>
+                    <h3>لم تجد إجابة لسؤالك؟</h3>
+                    <p>فريقنا جاهز لمساعدتك في أي وقت. لا تتردد في التواصل معنا!</p>
+                    <a href="#" class="cta-button">
+                        <span>تواصل معنا</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="faq.js"></script>
+</body>
+</html>

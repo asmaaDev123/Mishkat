@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة - أكاديمية تعليم القرآن الكريم</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- خط القرآن والعربي -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ملف التنسيقات الخاص -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- إعدادات تخصيص Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1B4332',
+                        'primary-light': '#2D6A4F',
+                        'secondary': '#F5EBE0',
+                        'accent': '#D4A373',
+                        'cream': '#FAF7F2',
+                        'dark-text': '#2C3E2D'
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                        'amiri': ['Amiri', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-cairo bg-cream">
+
+    <!-- ====== قسم المعلمين ====== -->
+    <section id="teachers" class="teachers-section py-20 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- العنوان الرئيسي للقسم -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block text-accent font-amiri text-2xl mb-3">﴿ وَعَلَّمَكَ مَا لَمْ تَكُنْ تَعْلَمُ ﴾</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+                    معلمونا الكرام
+                </h2>
+                <div class="title-divider mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+                    نخبة من خيرة المشايخ والمعلمين المُجازين بأعلى الأسانيد لتعليم كتاب الله بإتقان
+                </p>
+            </div>
+
+            <!-- شبكة كروت المعلمين -->
+            <div id="teachersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

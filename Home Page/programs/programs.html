@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة - البرامج التعليمية</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4', 100: '#dcfce7', 200: '#b6f2cd',
+                            300: '#7ae1a8', 400: '#3cc87c', 500: '#1a7a4a',
+                            600: '#155e3a', 700: '#124a2f', 800: '#0f3b26', 900: '#0a2919',
+                        },
+                        beige: {
+                            50: '#fefcf8', 100: '#fdf8ed', 200: '#faf0d6',
+                            300: '#f5e3b8', 400: '#edd499', 500: '#e0bf72',
+                        },
+                        cream: {
+                            50: '#fefdfb', 100: '#fdfaf4', 200: '#fbf5e9', 300: '#f7edda',
+                        }
+                    },
+                    fontFamily: {
+                        kufi: ['Noto Kufi Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="programs.css">
+</head>
+
+<body class="font-kufi bg-cream-100">
+
+    <!--=========== قسم البرامج التعليمية =============-->
+    <section id="programs" class="programs-section">
+
+       
+        <div class="programs-bg" aria-hidden="true">
+            <div class="programs-bg__circle programs-bg__circle--1"></div>
+            <div class="programs-bg__circle programs-bg__circle--2"></div>
+            <div class="programs-bg__circle programs-bg__circle--3"></div>
+            <div class="programs-bg__pattern"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- ========== عنوان القسم ========== -->
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-header__badge">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-3.486 1.494 2.698 1.159a1 1 0 00.788 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"/>
+                    </svg>
+                    البرامج التعليمية
+                </span>
+                <h2 class="section-header__title">
+                    اكتشف برامجنا
+                    <span class="section-header__title-accent">في تعليم القرآن</span>
+                </h2>
+                <p class="section-header__desc">
+                    برامج متنوعة صُمّمت بإتقان لتناسب جميع الأعمار والمستويات،
+                    بإشراف نخبة من الشيوخ والمعلمين المُجازين
+                </p>
+                <div class="section-header__line" aria-hidden="true">
+                    <span></span>
+                    <svg class="w-5 h-5 text-beige-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z"/>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- ========== فلتر التصنيفات ========== -->
+            <div class="filter-bar" data-animate="fade-up">
+                <button class="filter-bar__btn filter-bar__btn--active" data-filter="all">الكل</button>
+                <button class="filter-bar__btn" data-filter="quran">القرآن الكريم</button>
+                <button class="filter-bar__btn" data-filter="tajweed">التجويد</button>
+                <button class="filter-bar__btn" data-filter="kids">الأطفال</button>
+                <button class="filter-bar__btn" data-filter="islamic">العلوم الشرعية</button>
+            </div>
+
+            <!-- ========== شبكة الكروت ========== -->
+            <div id="programsGrid" class="programs-grid">
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="programs.js"></script>
+</body>
+</html>

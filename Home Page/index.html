@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشكاة | Mishkat - منصة تعليمية إسلامية</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mishkat-green': {
+                            50:  '#f0f7f4',
+                            100: '#dceee5',
+                            200: '#bbdece',
+                            300: '#8ec7ab',
+                            400: '#5daa83',
+                            500: '#3b8f66',
+                            600: '#2a7351',
+                            700: '#225c42',
+                            800: '#1d4a36',
+                            900: '#193d2e',
+                            950: '#0c221a',
+                        },
+                        'mishkat-beige': {
+                            50:  '#fefdfb',
+                            100: '#fdf9f0',
+                            200: '#faf2de',
+                            300: '#f5e6c4',
+                            400: '#eed5a0',
+                            500: '#e5c07a',
+                            600: '#d4a54e',
+                            700: '#b8893d',
+                            800: '#956e35',
+                            900: '#795b2e',
+                            950: '#412f17',
+                        },
+                        gold: {
+                            50:  '#FFF9E6',
+                            100: '#FFF0B3',
+                            200: '#FFE680',
+                            300: '#FFDB4D',
+                            400: '#FFD11A',
+                            500: '#C9A84C',
+                            600: '#B8943F',
+                            700: '#9A7B33',
+                            800: '#7C6228',
+                            900: '#5E4A1E',
+                        },
+                        night: {
+                            50:  '#E8EAF0',
+                            100: '#C5CAD6',
+                            200: '#9FA8BC',
+                            300: '#7986A2',
+                            400: '#5C6D8F',
+                            500: '#3F547C',
+                            600: '#374A6E',
+                            700: '#2D3D5B',
+                            800: '#1A2744',
+                            900: '#0D1728',
+                            950: '#070E1A',
+                        }
+                    },
+                    fontFamily: {
+                        'arabic': ['Tajawal', 'Arial', 'sans-serif'],
+                        'amiri': ['Amiri', 'serif'],
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-arabic bg-mishkat-beige-50 text-mishkat-green-900 overflow-x-hidden">
+
+
+    <!--  NAVBAR SECTION  -->
+
+    <nav id="navbar"
+         class="navbar fixed top-0 right-0 left-0 z-50 transition-all duration-500 ease-in-out"
+         role="navigation"
+         aria-label="القائمة الرئيسية">
+
+        <div class="navbar__container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="navbar__wrapper flex items-center justify-between h-20">
+
+                <!-- ===== القسم الأيسر: اللوجو + الاسم ===== -->
+                <div class="navbar__brand flex items-center gap-3 flex-shrink-0">
+                    <a href="#" class="navbar__logo-link flex items-center gap-3 group" aria-label="الصفحة الرئيسية - مشكاة">
+                        <div class="navbar__logo-wrapper relative w-12 h-12 rounded-full overflow-hidden
+                                    ring-2 ring-mishkat-green-600/30 group-hover:ring-mishkat-green-500
+                                    transition-all duration-300 shadow-lg group-hover:shadow-xl
+                                    group-hover:scale-105">
+                            <img src="assests/6046279299901361992.jpg"
+                                 alt="شعار مشكاة"
+                                 class="w-full h-full object-cover"
+                                 loading="eager"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <!-- Fallback -->
+                            <div class="w-full h-full bg-gradient-to-br from-mishkat-green-600 to-mishkat-green-800
+                                        items-center justify-center text-white font-bold text-lg hidden">
+                                م
+                            </div>
+                        </div>
+                        <div class="navbar__brand-text flex flex-col leading-tight">
+                            <span class="text-lg font-bold text-mishkat-green-800 group-hover:text-mishkat-green-600
+                                         transition-colors duration-300">
+                                مِشكَاةُ
+                            </span>
+                            <span class="text-xs font-medium text-mishkat-green-600/70 tracking-wide">
+                                Mishkat
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ===== القسم الأوسط: روابط التنقل ===== -->
+                <div class="navbar__nav hidden lg:flex items-center gap-1">
+                    <ul class="navbar__menu flex items-center gap-1" role="menubar">
+                        <li role="none">
+                            <a href="#hero"
+                               class="navbar__link nav-link relative px-4 py-2 text-sm font-medium
+                                      text-mishkat-green-800 hover:text-mishkat-green-600
+                                      rounded-lg hover:bg-mishkat-green-50/50
+                                      transition-all duration-300 block"
+                               role="menuitem"
+                               data-active="true">
+                                الصفحة الرئيسية
+                                <span class="nav-link__underline"></span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="#paths"
+                               class="navbar__link nav-link relative px-4 py-2 text-sm font-medium
+                                      text-mishkat-green-800 hover:text-mishkat-green-600
+                                      rounded-lg hover:bg-mishkat-green-50/50
+                                      transition-all duration-300 block"
+                               role="menuitem">
+                                المسارات
+                                <span class="nav-link__underline"></span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="#teachers"
+                               class="navbar__link nav-link relative px-4 py-2 text-sm font-medium
+                                      text-mishkat-green-800 hover:text-mishkat-green-600
+                                      rounded-lg hover:bg-mishkat-green-50/50
+                                      transition-all duration-300 block"
+                               role="menuitem">
+                                المعلمين
+                                <span class="nav-link__underline"></span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="#programs"
+                               class="navbar__link nav-link relative px-4 py-2 text-sm font-medium
+                                      text-mishkat-green-800 hover:text-mishkat-green-600
+                                      rounded-lg hover:bg-mishkat-green-50/50
+                                      transition-all duration-300 block"
+                               role="menuitem">
+                                البرامج الدراسية
+                                <span class="nav-link__underline"></span>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="#about"
+                               class="navbar__link nav-link relative px-4 py-2 text-sm font-medium
+                                      text-mishkat-green-800 hover:text-mishkat-green-600
+                                      rounded-lg hover:bg-mishkat-green-50/50
+                                      transition-all duration-300 block"
+                               role="menuitem">
+                                عن المنصة
+                                <span class="nav-link__underline"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                  <!-- ===== القسم الأيمن: أزرار الإجراءات ===== -->
+                <div class="navbar__actions hidden lg:flex items-center gap-3">
+
+                    <!-- زر اشترك الآن مع Dropdown -->
+                    <div class="navbar__dropdown relative" data-dropdown>
+                        <button id="subscribeBtn"
+                                class="navbar__dropdown-trigger flex items-center gap-2 px-5 py-2.5
+                                       bg-gradient-to-l from-mishkat-green-700 to-mishkat-green-600
+                                       hover:from-mishkat-green-600 hover:to-mishkat-green-500
+                                       text-white text-sm font-bold rounded-xl
+                                       shadow-lg shadow-mishkat-green-600/25
+                                       hover:shadow-xl hover:shadow-mishkat-green-500/30
+                                       transition-all duration-300 hover:-translate-y-0.5
+                                       active:translate-y-0"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-controls="subscribeDropdown">
+                            <span>اشترك الآن</span>
+                            <!-- سهم -->
+                            <svg class="navbar__dropdown-arrow w-4 h-4 transition-transform duration-300"
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                      d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+
+                        <!-- قائمة الاشتراك المنسدلة -->
+                        <div id="subscribeDropdown"
+                             class="navbar__dropdown-menu absolute left-0 mt-3 w-64
+                                    bg-white/95 backdrop-blur-xl
+                                    rounded-2xl shadow-2xl shadow-mishkat-green-900/10
+                                    border border-mishkat-green-100/50
+                                    opacity-0 invisible translate-y-2 scale-95
+                                    transition-all duration-300 ease-out
+                                    overflow-hidden"
+                             role="menu"
+                             aria-labelledby="subscribeBtn">
+
+                            <!-- رأس الـ Dropdown -->
+                            <div class="px-5 py-3 bg-gradient-to-l from-mishkat-green-50 to-mishkat-beige-100
+                                        border-b border-mishkat-green-100/50">
+                                <p class="text-xs font-bold text-mishkat-green-700">اختر نوع التسجيل</p>
+                            </div>
+
+                            <!-- خيارات التسجيل -->
+                            <div class="p-2">
+                                <a href="#register-student"
+                                   class="navbar__dropdown-item flex items-center gap-3 px-4 py-3
+                                          rounded-xl text-sm font-medium text-mishkat-green-800
+                                          hover:bg-mishkat-green-50 hover:text-mishkat-green-600
+                                          transition-all duration-200 group"
+                                   role="menuitem">
+                                    <span class="flex items-center justify-center w-10 h-10
+                                                 bg-mishkat-green-100 group-hover:bg-mishkat-green-200
+                                                 rounded-xl transition-colors duration-200">
+                                        <!-- أيقونة الطالب -->
+                                        <svg class="w-5 h-5 text-mishkat-green-600" fill="none"
+                                             stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987
+                                                     8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0
+                                                     016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018
+                                                     18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/>
+                                        </svg>
+                                    </span>
+                                    <div class="flex flex-col">
+                                        <span class="font-bold">تسجيل طالب أو طالبة</span>
+                                        <span class="text-xs text-mishkat-green-500 mt-0.5">
+                                            ابدأ رحلتك التعليمية
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <a href="#register-teacher"
+                                   class="navbar__dropdown-item flex items-center gap-3 px-4 py-3
+                                          rounded-xl text-sm font-medium text-mishkat-green-800
+                                          hover:bg-mishkat-green-50 hover:text-mishkat-green-600
+                                          transition-all duration-200 group"
+                                   role="menuitem">
+                                    <span class="flex items-center justify-center w-10 h-10
+                                                 bg-mishkat-beige-200 group-hover:bg-mishkat-beige-300
+                                                 rounded-xl transition-colors duration-200">
+                                        <!-- أيقونة المعلم -->
+                                        <svg class="w-5 h-5 text-mishkat-green-600" fill="none"
+                                             stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                  d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627
+                                                     0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0
+                                                     00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905
+                                                     59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248
+                                                     -1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702
+                                                     50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000
+                                                     1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981
+                                                     5.981 0 006.75 15.75v-1.5"/>
+                                        </svg>
+                                    </span>
+                                    <div class="flex flex-col">
+                                        <span class="font-bold">تسجيل معلم / معلمة</span>
+                                        <span class="text-xs text-mishkat-green-500 mt-0.5">
+                                            شارك علمك مع الآخرين
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- زر تسجيل الدخول -->
+                    <a href="#login"
+                       class="navbar__login-btn px-5 py-2.5 text-sm font-bold
+                              text-mishkat-green-700 bg-mishkat-green-50
+                              hover:bg-mishkat-green-100 hover:text-mishkat-green-800
+                              border border-mishkat-green-200 hover:border-mishkat-green-300
+                              rounded-xl transition-all duration-300
+                              hover:-translate-y-0.5 hover:shadow-md">
+                        تسجيل الدخول
+                    </a>
+                </div>
+
+                <!-- ===== زر القائمة للموبايل ===== -->
+                <div class="navbar__mobile-toggle lg:hidden">
+                    <button id="mobileMenuBtn"
+                            class="mobile-menu-btn relative w-10 h-10 flex items-center justify-center
+                                   rounded-lg hover:bg-mishkat-green-50/50
+                                   transition-all duration-300"
+                            aria-expanded="false"
+                            aria-controls="mobileMenu"
+                            aria-label="فتح القائمة">
+                        <div class="hamburger-icon w-6 h-5 flex flex-col justify-between">
+                            <span class="hamburger-line block h-0.5 w-full bg-mishkat-green-700 rounded-full
+                                         transition-all duration-300 origin-center"></span>
+                            <span class="hamburger-line block h-0.5 w-full bg-mishkat-green-700 rounded-full
+                                         transition-all duration-300"></span>
+                            <span class="hamburger-line block h-0.5 w-3/4 bg-mishkat-green-700 rounded-full
+                                         transition-all duration-300 origin-center mr-auto"></span>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== Mobile Menu ===== -->
+        <div id="mobileMenu"
+             class="navbar__mobile-menu lg:hidden
+                    max-h-0 overflow-hidden
+                    transition-all duration-500 ease-in-out
+                    bg-white/95 backdrop-blur-lg
+                    border-t border-mishkat-green-100/50"
+             role="menu"
+             aria-hidden="true">
+            <div class="navbar__mobile-inner px-4 py-6 space-y-2">
+                <a href="#hero" class="mobile-nav-link block px-4 py-3 text-base font-medium text-mishkat-green-800
+                                      hover:text-mishkat-green-600 hover:bg-mishkat-green-50/50
+                                      rounded-xl transition-all duration-300" role="menuitem">
+                    الصفحة الرئيسية
+                </a>
+                <a href="#paths" class="mobile-nav-link block px-4 py-3 text-base font-medium text-mishkat-green-800
+                                       hover:text-mishkat-green-600 hover:bg-mishkat-green-50/50
+                                       rounded-xl transition-all duration-300" role="menuitem">
+                    المسارات
+                </a>
+                <a href="#teachers" class="mobile-nav-link block px-4 py-3 text-base font-medium text-mishkat-green-800
+                                          hover:text-mishkat-green-600 hover:bg-mishkat-green-50/50
+                                          rounded-xl transition-all duration-300" role="menuitem">
+                    المعلمين
+                </a>
+                <a href="#programs" class="mobile-nav-link block px-4 py-3 text-base font-medium text-mishkat-green-800
+                                          hover:text-mishkat-green-600 hover:bg-mishkat-green-50/50
+                                          rounded-xl transition-all duration-300" role="menuitem">
+                    البرامج الدراسية
+                </a>
+                <a href="#about" class="mobile-nav-link block px-4 py-3 text-base font-medium text-mishkat-green-800
+                                       hover:text-mishkat-green-600 hover:bg-mishkat-green-50/50
+                                       rounded-xl transition-all duration-300" role="menuitem">
+                    عن المنصة
+                </a>
+
+                <!-- زر اشترك في الموبايل -->
+                <div class="pt-4 border-t border-mishkat-green-100/50">
+                    <a href="#subscribe"
+                       class="block w-full text-center px-5 py-3
+                              bg-gradient-to-l from-mishkat-green-700 to-mishkat-green-600
+                              text-white text-sm font-bold rounded-xl
+                              shadow-lg shadow-mishkat-green-600/25
+                              transition-all duration-300">
+                        اشترك الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!--  HERO SECTION  -->
+
+    <section id="hero" class="hero-section" aria-label="القسم الرئيسي">
+
+        <!-- Background Image with Parallax -->
+        <div class="hero-bg" id="heroBg" aria-hidden="true">
+            <img
+                src="assests/download (2).jfif"
+                alt=""
+                class="hero-bg-image"
+                loading="eager"
+                fetchpriority="high"
+            >
+        </div>
+
+        <!-- Gradient Overlay -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Animated Light Particles -->
+        <canvas id="particlesCanvas" class="hero-particles" aria-hidden="true"></canvas>
+
+        <!-- Decorative Light Rays -->
+        <div class="light-ray" aria-hidden="true"></div>
+        <div class="light-ray light-ray-2" aria-hidden="true"></div>
+
+        <!-- Decorative Islamic Pattern (Top) -->
+        <div class="islamic-pattern-top" aria-hidden="true"></div>
+
+        <!-- Main Content -->
+        <div class="hero-content">
+            <div class="hero-inner">
+
+                <!-- Bismillah Badge -->
+                <div class="hero-badge" id="heroBadge">
+                    <span class="badge-icon">﷽</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="hero-title" id="heroTitle">
+                    <span class="title-line title-line-1">
+                        <span class="title-word">مِشْكَاةٌ</span>
+                    </span>
+                    <span class="title-line title-line-2">
+                        <span class="title-word-sub">نورٌ على دربِ المعرفة</span>
+                    </span>
+                </h1>
+
+                <!-- Decorative Divider -->
+                <div class="hero-divider" id="heroDivider">
+                    <span class="divider-line"></span>
+                    <span class="divider-star">✦</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle" id="heroSubtitle">
+                    رحلةٌ معرفيّة تأخذك في رحابِ العلوم الشرعية والقرآنية،
+                    <br class="hidden sm:block">
+                    لتُنير بصيرتك وتُزكّي نفسك بنورِ الوحي
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons" id="heroButtons">
+                    <a href="#start" class="btn-primary" role="button">
+                        <span class="btn-text">ابدأ رحلتك</span>
+                        <span class="btn-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </span>
+                        <span class="btn-glow" aria-hidden="true"></span>
+                    </a>
+                    <a href="#contact" class="btn-secondary" role="button">
+                        <span class="btn-text">تواصل معنا</span>
+                        <span class="btn-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span class="scroll-text">اكتشف المزيد</span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ===== JavaScript  ===== -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
